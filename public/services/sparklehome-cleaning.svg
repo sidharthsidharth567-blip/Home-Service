@@ -1,0 +1,35 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#FEF2F2"/>
+  <rect x="40" y="40" width="1120" height="820" rx="40" fill="url(#bg)"/>
+  <circle cx="1032" cy="164" r="118" fill="#FBCFE8" opacity="0.7"/>
+  <circle cx="156" cy="738" r="130" fill="#FECDD3" opacity="0.8"/>
+  <rect x="120" y="126" width="260" height="42" rx="21" fill="#FFE4E6"/>
+  <text x="150" y="154" fill="#E11D48" font-family="Arial, sans-serif" font-size="28" font-weight="700">Cleaning</text>
+  <text x="120" y="258" fill="#111827" font-family="Arial, sans-serif" font-size="72" font-weight="700">SparkleHome</text>
+  <text x="120" y="336" fill="#111827" font-family="Arial, sans-serif" font-size="72" font-weight="700">Cleaning</text>
+  <text x="120" y="408" fill="#374151" font-family="Arial, sans-serif" font-size="34">Deep cleaning for kitchens, bathrooms and living spaces</text>
+  <rect x="118" y="490" width="386" height="214" rx="32" fill="#FFFFFF" opacity="0.98"/>
+  <rect x="164" y="544" width="48" height="120" rx="18" fill="#FB7185"/>
+  <path d="M188 514L230 548H146L188 514Z" fill="#F43F5E"/>
+  <rect x="256" y="528" width="150" height="32" rx="16" fill="#FECDD3"/>
+  <rect x="256" y="580" width="200" height="22" rx="11" fill="#E5E7EB"/>
+  <rect x="256" y="620" width="164" height="22" rx="11" fill="#E5E7EB"/>
+  <circle cx="434" cy="540" r="34" fill="#FFE4E6"/>
+  <path d="M434 520V560" stroke="#E11D48" stroke-width="8" stroke-linecap="round"/>
+  <path d="M414 540H454" stroke="#E11D48" stroke-width="8" stroke-linecap="round"/>
+  <path d="M746 192H1018V670H746V192Z" fill="#FFF1F2"/>
+  <rect x="746" y="192" width="272" height="478" rx="38" fill="#FFF1F2" stroke="#FDA4AF" stroke-width="12"/>
+  <rect x="792" y="244" width="180" height="122" rx="28" fill="#FFFFFF"/>
+  <circle cx="882" cy="306" r="34" fill="#F43F5E"/>
+  <path d="M882 274L890 298L916 298L895 313L903 338L882 322L861 338L869 313L848 298L874 298L882 274Z" fill="#FFF1F2"/>
+  <rect x="792" y="402" width="180" height="178" rx="28" fill="#FFFFFF"/>
+  <path d="M850 474C850 447 872 425 900 425C928 425 950 447 950 474V544H850V474Z" fill="#FECDD3"/>
+  <rect x="842" y="544" width="116" height="24" rx="12" fill="#FB7185"/>
+  <text x="748" y="742" fill="#1F2937" font-family="Arial, sans-serif" font-size="30" font-weight="700">Fresh spaces with eco safe products</text>
+  <defs>
+    <linearGradient id="bg" x1="82" y1="92" x2="1112" y2="836" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF7ED"/>
+      <stop offset="1" stop-color="#FFE4E6"/>
+    </linearGradient>
+  </defs>
+</svg>

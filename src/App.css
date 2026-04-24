@@ -1,0 +1,112 @@
+:root {
+  --primary: #e23744;
+  --primary-hover: #cf2430;
+  --primary-soft: #fff1f2;
+  --secondary: #ff8a95;
+  --text-dark: #111827;
+  --text-gray: #4b5563;
+  --text-light: #9ca3af;
+  --bg-light: #f9fafb;
+  --bg-white: #ffffff;
+  --border: #e5e7eb;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(226, 55, 68, 0.08);
+  --shadow-lg: 0 12px 24px -6px rgba(226, 55, 68, 0.12);
+}
+
+body.dark-mode {
+  --text-dark: #f9fafb;
+  --text-gray: #d1d5db;
+  --text-light: #9ca3af;
+  --bg-light: #111827;
+  --bg-white: #1f2937;
+  --border: #374151;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px rgba(226, 55, 68, 0.2);
+  --shadow-lg: 0 12px 24px -6px rgba(226, 55, 68, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 320px;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, .logo-text {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-family: inherit;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-main {
+  flex: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+}
+
+/* Auth Page Styles */
+.auth-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.auth-page-card {
+  width: 100%;
+}

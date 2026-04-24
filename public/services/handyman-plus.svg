@@ -1,0 +1,36 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#F8FAFC"/>
+  <rect x="40" y="40" width="1120" height="820" rx="40" fill="url(#bg)"/>
+  <circle cx="1030" cy="164" r="120" fill="#CBD5E1" opacity="0.65"/>
+  <circle cx="156" cy="742" r="134" fill="#E2E8F0" opacity="0.9"/>
+  <rect x="120" y="126" width="296" height="42" rx="21" fill="#E2E8F0"/>
+  <text x="146" y="154" fill="#475569" font-family="Arial, sans-serif" font-size="28" font-weight="700">Maintenance</text>
+  <text x="120" y="258" fill="#0F172A" font-family="Arial, sans-serif" font-size="72" font-weight="700">HandyMan</text>
+  <text x="120" y="336" fill="#0F172A" font-family="Arial, sans-serif" font-size="72" font-weight="700">Plus</text>
+  <text x="120" y="408" fill="#334155" font-family="Arial, sans-serif" font-size="34">General repairs, fixtures, assembly and quick home fixes</text>
+  <rect x="120" y="502" width="404" height="208" rx="30" fill="#FFFFFF"/>
+  <rect x="164" y="554" width="32" height="122" rx="16" fill="#F59E0B"/>
+  <path d="M180 518L222 560H138L180 518Z" fill="#D97706"/>
+  <rect x="252" y="528" width="214" height="24" rx="12" fill="#CBD5E1"/>
+  <rect x="252" y="572" width="168" height="24" rx="12" fill="#CBD5E1"/>
+  <path d="M266 648L318 596" stroke="#475569" stroke-width="16" stroke-linecap="round"/>
+  <path d="M286 668L338 616" stroke="#475569" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="432" cy="632" r="34" fill="#E2E8F0"/>
+  <path d="M416 632H448" stroke="#475569" stroke-width="8" stroke-linecap="round"/>
+  <path d="M432 616V648" stroke="#475569" stroke-width="8" stroke-linecap="round"/>
+  <rect x="734" y="206" width="286" height="430" rx="36" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="12"/>
+  <rect x="770" y="244" width="214" height="160" rx="22" fill="#F8FAFC"/>
+  <path d="M808 352L870 290L908 328L964 272" stroke="#F59E0B" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="770" y="438" width="214" height="146" rx="22" fill="#F8FAFC"/>
+  <path d="M820 490H934" stroke="#94A3B8" stroke-width="10" stroke-linecap="round"/>
+  <path d="M820 534H906" stroke="#94A3B8" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="978" cy="684" r="48" fill="#FFFFFF" stroke="#94A3B8" stroke-width="10"/>
+  <path d="M962 684L974 696L995 671" stroke="#475569" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="744" y="748" fill="#1E293B" font-family="Arial, sans-serif" font-size="30" font-weight="700">One call for all small home tasks</text>
+  <defs>
+    <linearGradient id="bg" x1="80" y1="92" x2="1112" y2="842" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E2E8F0"/>
+    </linearGradient>
+  </defs>
+</svg>
