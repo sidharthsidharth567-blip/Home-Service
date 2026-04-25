@@ -1244,19 +1244,6 @@ function Navbar({
                         {t.settings || 'Settings'}
                       </button>
                       <div className="dropdown-divider"></div>
-                      <div
-                        className="dropdown-item dark-mode-toggle"
-                        onClick={(e) => { e.stopPropagation(); toggleTheme(); }}
-                      >
-                        <div className="dark-mode-label">
-                          {theme === 'dark' ? <Moon size={16} /> : <Sun size={16} />}
-                          <span>Dark Mode</span>
-                        </div>
-                        <label className="theme-switch" onClick={(e) => e.stopPropagation()}>
-                          <input type="checkbox" checked={theme === 'dark'} onChange={() => {}} />
-                          <span className="slider round" onClick={() => toggleTheme()}></span>
-                        </label>
-                      </div>
                       <button
                         onClick={() => { onLogout(); setIsDropdownOpen(false); }}
                         className="dropdown-item logout"

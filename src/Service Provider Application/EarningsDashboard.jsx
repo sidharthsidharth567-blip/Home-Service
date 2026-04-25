@@ -444,7 +444,21 @@ export default function EarningsDashboard() {
             <div style={styles.walletLabel}>{w.label}</div>
             <div style={styles.walletVal}>{w.val}</div>
             <div style={styles.walletSub}>{w.sub}</div>
-            <button style={w.primary ? styles.btnPrimary : styles.btnSecondary}>{w.btn}</button>
+            <button
+              style={w.primary ? styles.btnPrimary : styles.btnSecondary}
+              onClick={() => {
+                if (i === 0) {
+                  if (window.confirm('Withdraw \u20b912,500 to your registered bank account?')) {
+                    alert('\u2713 Withdrawal of \u20b912,500 initiated! Will be credited in 1\u20132 business days.');
+                  }
+                } else if (i === 1) {
+                  alert('Pending Balance Details:\n\u2022 Job #JOB-104: \u20b91,200 (Processing)\n\u2022 Job #JOB-105: \u20b92,000 (Processing)\n\nExpected by: Apr 18, 2026');
+                } else {
+                  const details = prompt('Enter new bank account number (demo):');
+                  if (details) alert('\u2713 Bank details updated successfully!');
+                }
+              }}
+            >{w.btn}</button>
           </div>
         ))}
       </div>
@@ -469,8 +483,31 @@ export default function EarningsDashboard() {
       {/* Reports */}
       <p style={styles.secLabel}>🧾 Reports</p>
       <div style={styles.dlBtns}>
-        <button style={styles.dlBtn}>📄 Download PDF Statement</button>
-        <button style={styles.dlBtn}>📊 Download Excel Report</button>
+        <button
+          style={styles.dlBtn}
+          onClick={() => {
+            const rows = [['Date','Time','Service','Earned','Commission','Net'],
+              ...allJobs.map(j => [j.date, j.time, j.service, ''+j.earned, ''+j.commission, ''+j.net])];
+            const csv = rows.map(r => r.join(',')).join('\n');
+            const a = document.createElement('a');
+            a.href = 'data:text/csv,' + encodeURIComponent(csv);
+            a.download = 'earnings_statement.csv';
+            a.click();
+          }}
+        >📄 Download PDF Statement</button>
+        <button
+          style={styles.dlBtn}
+          onClick={() => {
+            const rows = [['Month','Income','Expenses'],
+              ['Jan 2026','28000','12000'],['Feb 2026','42000','18000'],
+              ['Mar 2026','35000','14000'],['Apr 2026','67000','22000']];
+            const tsv = rows.map(r => r.join('\t')).join('\n');
+            const a = document.createElement('a');
+            a.href = 'data:text/plain,' + encodeURIComponent(tsv);
+            a.download = 'earnings_report.xls';
+            a.click();
+          }}
+        >📊 Download Excel Report</button>
       </div>
 
     </div>
