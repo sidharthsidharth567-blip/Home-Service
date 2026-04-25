@@ -272,7 +272,7 @@ function CategoryView({
                   className={`category-switch-chip ${isActive ? 'active' : ''}`}
                   onClick={() => handleCategorySelect(category.name)}
                 >
-                  <img src={category.image} alt={category.name} />
+                  {/* <img src={category.image} alt={category.name} /> */}
                   <span>{category.name}</span>
                 </button>
               );

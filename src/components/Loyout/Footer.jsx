@@ -1,4 +1,5 @@
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { useState } from 'react';
+import { Mail, Phone, MapPin, Apple, PlayCircle, ChevronDown } from 'lucide-react';
 import { useLanguage } from '../Advanced Modules/LanguageSupport';
 import './Footer.css';
 
@@ -30,9 +31,14 @@ const LinkedinIcon = ({ size = 20 }) => (
   </svg>
 );
 
-
 function Footer() {
   const { t } = useLanguage();
+  const [expandedSection, setExpandedSection] = useState(null);
+
+  const toggleSection = (section) => {
+    setExpandedSection(prev => prev === section ? null : section);
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -40,59 +46,83 @@ function Footer() {
           <h3>Home<span>Care</span></h3>
           <p>Your trusted home service partner providing quality services at your doorstep.</p>
           <div className="social-links">
-            <a href="#facebook" className="social-icon" aria-label="Facebook"><FacebookIcon size={20} /></a>
-            <a href="#twitter" className="social-icon" aria-label="Twitter"><XIcon size={20} /></a>
-            <a href="#instagram" className="social-icon" aria-label="Instagram"><InstagramIcon size={20} /></a>
-            <a href="#linkedin" className="social-icon" aria-label="LinkedIn"><LinkedinIcon size={20} /></a>
-            
+            <a href="#facebook" className="social-icon" aria-label="Facebook"><FacebookIcon size={18} /></a>
+            <a href="#twitter" className="social-icon" aria-label="Twitter"><XIcon size={18} /></a>
+            <a href="#instagram" className="social-icon" aria-label="Instagram"><InstagramIcon size={18} /></a>
+            <a href="#linkedin" className="social-icon" aria-label="LinkedIn"><LinkedinIcon size={18} /></a>
           </div>
         </div>
 
-        <div className="footer-section">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#home">{t.home || 'Home'}</a></li>
-            <li><a href="#services">{t.services || 'Services'}</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#careers">Careers</a></li>
-          </ul>
+        <div className={`footer-section ${expandedSection === 'quickLinks' ? 'expanded' : ''}`}>
+          <h4 onClick={() => toggleSection('quickLinks')}>
+            Quick Links
+            <ChevronDown className="mobile-chevron" size={20} />
+          </h4>
+          <div className="footer-collapse-content">
+            <div>
+              <ul>
+                <li><a href="#home">{t.home || 'Home'}</a></li>
+                <li><a href="#services">{t.services || 'Services'}</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#careers">Careers</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div className="footer-section">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#plumbing">Plumbing</a></li>
-            <li><a href="#electrical">Electrical</a></li>
-            <li><a href="#cleaning">Cleaning</a></li>
-            <li><a href="#repairs">Repairs</a></li>
-            <li><a href="#maintenance">Maintenance</a></li>
-          </ul>
+        <div className={`footer-section ${expandedSection === 'services' ? 'expanded' : ''}`}>
+          <h4 onClick={() => toggleSection('services')}>
+            Services
+            <ChevronDown className="mobile-chevron" size={20} />
+          </h4>
+          <div className="footer-collapse-content">
+            <div>
+              <ul>
+                <li><a href="#plumbing">Plumbing</a></li>
+                <li><a href="#electrical">Electrical</a></li>
+                <li><a href="#cleaning">Cleaning</a></li>
+                <li><a href="#repairs">Repairs</a></li>
+                <li><a href="#maintenance">Maintenance</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div className="footer-section">
-          <h4>{t.contactUs || 'Contact Info'}</h4>
-          <p className="contact-item">
-            <Mail size={18} />
-            <span>Email: support@homeserve.com</span>
-          </p>
-          <p className="contact-item">
-            <Phone size={18} />
-            <span>Phone: +91 9876543210</span>
-          </p>
-          <p className="contact-item">
-            <MapPin size={18} />
-            <span>Address: Tech Park, Bangalore</span>
-          </p>
-          <h4 style={{ marginTop: '15px' }}>Download App</h4>
-          <div className="app-links">
-            <button className="app-button">App Store</button>
-            <button className="app-button">Play Store</button>
+        <div className={`footer-section ${expandedSection === 'contact' ? 'expanded' : ''}`}>
+          <h4 onClick={() => toggleSection('contact')}>
+            {t.contactUs || 'Contact Info'}
+            <ChevronDown className="mobile-chevron" size={20} />
+          </h4>
+          <div className="footer-collapse-content">
+            <div>
+              <p className="contact-item">
+                <Mail size={18} />
+                <span>support@homeserve.com</span>
+              </p>
+              <p className="contact-item">
+                <Phone size={18} />
+                <span>+91 9876543210</span>
+              </p>
+              <p className="contact-item">
+                <MapPin size={18} />
+                <span>Tech Park, Bangalore</span>
+              </p>
+              <h4 style={{ marginTop: '24px', marginBottom: '12px' }}>Get the App</h4>
+              <div className="app-links">
+                <button className="app-button">
+                  <Apple size={18} /> App Store
+                </button>
+                <button className="app-button">
+                  <PlayCircle size={18} /> Google Play
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; 2026 HomeServe. All rights reserved.</p>
+        <p>&copy; 2026 HomeCare. All rights reserved.</p>
         <div className="footer-links">
           <a href="#privacy">{t.privacy || 'Privacy Policy'}</a>
           <a href="#terms">{t.terms || 'Terms of Service'}</a>

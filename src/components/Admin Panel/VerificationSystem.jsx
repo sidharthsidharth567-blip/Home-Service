@@ -93,7 +93,7 @@ export default function VerificationSystem({ onBack }) {
   };
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '380px 1fr', gap: '32px', height: 'calc(100vh - 180px)' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))', gap: '32px', minHeight: 'calc(100vh - 180px)' }}>
       {/* Queue Sidebar */}
       <div style={{ background: '#fff', borderRadius: '16px', border: `1px solid ${vSystemTheme.border}`, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
         <div style={{ padding: '20px', borderBottom: `1px solid ${vSystemTheme.border}` }}>
@@ -153,10 +153,10 @@ export default function VerificationSystem({ onBack }) {
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginBottom: '32px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '24px', marginBottom: '32px' }}>
                 <div style={{ padding: '20px', borderRadius: '12px', background: '#f0fdf4', border: '1px solid #bbf7d0' }}>
                   <h4 style={{ color: '#166534', fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', marginBottom: '12px', letterSpacing: '0.5px' }}>Automated Checks</h4>
-                  <div style={{ display: 'flex', gap: '12px' }}>
+                  <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                      <div style={{ fontSize: '13px', color: '#166534', display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 700 }}><CheckCircle size={16} /> Phone Verified</div>
                      <div style={{ fontSize: '13px', color: selectedProvider.backgroundChecks.addressValidated ? '#166534' : '#ef4444', display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 700 }}>
                         {selectedProvider.backgroundChecks.addressValidated ? <CheckCircle size={16} /> : <AlertCircle size={16} />} 
@@ -200,7 +200,7 @@ export default function VerificationSystem({ onBack }) {
               </div>
             </div>
 
-            <div style={{ padding: '24px 32px', borderTop: `1px solid ${vSystemTheme.border}`, display: 'flex', justifyContent: 'flex-end', gap: '16px', background: '#fff' }}>
+            <div style={{ padding: '24px 32px', borderTop: `1px solid ${vSystemTheme.border}`, display: 'flex', justifyContent: 'flex-end', gap: '16px', flexWrap: 'wrap', background: '#fff' }}>
               <button 
                 onClick={() => setIsRejectModalOpen(true)}
                 style={{ padding: '12px 24px', borderRadius: '10px', background: '#fef2f2', color: '#ef4444', border: 'none', fontWeight: 700, cursor: 'pointer' }}

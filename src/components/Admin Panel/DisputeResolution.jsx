@@ -70,7 +70,7 @@ export default function DisputeResolution() {
   };
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '380px 1fr', gap: '32px', height: 'calc(100vh - 180px)' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))', gap: '32px', minHeight: 'calc(100vh - 180px)' }}>
       {/* List Sidebar */}
       <div style={{ background: '#fff', borderRadius: '16px', border: `1px solid ${disputeTheme.border}`, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
         <div style={{ padding: '20px', borderBottom: `1px solid ${disputeTheme.border}` }}>
@@ -137,7 +137,7 @@ export default function DisputeResolution() {
                  </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '32px' }}>
                 {/* Customer Section */}
                 <div>
                    <h4 style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '15px', fontWeight: 800, marginBottom: '16px' }}>
@@ -171,7 +171,7 @@ export default function DisputeResolution() {
                <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 13, color: disputeTheme.textGray }}>
                  <Gavel size={16} color={disputeTheme.primary} /> Awaiting Final Verdict
                </div>
-               <div style={{ display: 'flex', gap: 12 }}>
+               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                   <button 
                     onClick={() => { setResolutionAction('penalty'); setIsModalOpen(true); }}
                     style={{ padding: '12px 20px', borderRadius: '10px', background: '#fef2f2', color: '#ef4444', border: 'none', fontWeight: 700, cursor: 'pointer' }}

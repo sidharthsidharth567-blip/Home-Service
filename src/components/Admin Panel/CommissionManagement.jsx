@@ -77,13 +77,14 @@ export default function CommissionManagement() {
             ))}
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '24px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '24px' }}>
             <div style={{ ...styles.card, padding: 0, overflow: 'hidden' }}>
               <div style={{ padding: '20px', borderBottom: `1px solid ${financeTheme.border}`, display: 'flex', justifyContent: 'space-between' }}>
                 <h3 style={{ fontSize: '16px', fontWeight: 800 }}>Recent Payout Ledger</h3>
                 <button style={{ background:'none', border:'none', color:financeTheme.primary, fontWeight:700, fontSize:'13px', cursor:'pointer' }}>View All</button>
               </div>
-              <table style={styles.table}>
+              <div style={{ overflowX: 'auto' }}>
+                <table style={styles.table}>
                 <thead>
                   <tr>
                     <th style={styles.th}>Booking ID</th>
@@ -108,6 +109,7 @@ export default function CommissionManagement() {
                   ))}
                 </tbody>
               </table>
+              </div>
             </div>
 
             <div style={styles.card}>
@@ -147,7 +149,8 @@ export default function CommissionManagement() {
               <button style={{ display:'flex', alignItems:'center', gap:6, padding:'8px 12px', borderRadius:'8px', border:`1px solid ${financeTheme.border}`, background:'#fff', fontSize:'13px', fontWeight:600 }}><Filter size={14}/> Filters</button>
             </div>
           </div>
-          <table style={styles.table}>
+          <div style={{ overflowX: 'auto' }}>
+            <table style={styles.table}>
             <thead style={styles.th}>
               <tr>
                 <th style={styles.th}>Date</th>
@@ -171,11 +174,12 @@ export default function CommissionManagement() {
               ))}
             </tbody>
           </table>
+          </div>
         </div>
       )}
 
       {activeTab === 'settings' && (
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:24 }}>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap:24 }}>
           <div style={styles.card}>
             <h3 style={{ fontSize:'17px', fontWeight:800, marginBottom:16 }}>Category Margins</h3>
             <div style={{ display:'flex', flexDirection:'column', gap:12 }}>

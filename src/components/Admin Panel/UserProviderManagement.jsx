@@ -281,16 +281,6 @@ export default function UserProviderManagement({ adminUser, onLogout }) {
           <SidebarItem isMobile={isMobile} icon={HelpCircle} label="Help & Support" active={activeTab === 'help'} onClick={() => setActiveTab('help')} />
           <SidebarItem isMobile={isMobile} icon={Bell} label="Notifications" active={activeTab === 'notifications'} onClick={() => setActiveTab('notifications')} />
           <SidebarItem isMobile={isMobile} icon={Settings} label="Settings" active={activeTab === 'settings'} onClick={() => setActiveTab('settings')} />
-        </div>
-
-        <div className="admin-sidebar-footer">
-          <div className="admin-profile-card">
-            <div className="admin-profile-avatar">{adminName.slice(0, 2).toUpperCase()}</div>
-            <div>
-              <div className="admin-profile-name">{adminName}</div>
-              <div className="admin-profile-role">Platform administrator</div>
-            </div>
-          </div>
           <button type="button" onClick={onLogout} className="admin-logout">
             <LogOut size={18} />
             <span style={{ fontSize: '14px' }}>Logout</span>
@@ -324,10 +314,6 @@ export default function UserProviderManagement({ adminUser, onLogout }) {
             <button className="admin-action-button admin-action-button-primary">
               <Upload size={16} />
               Import Data
-            </button>
-            <button type="button" className="admin-action-button admin-action-button-danger" onClick={onLogout}>
-              <LogOut size={16} />
-              Logout
             </button>
           </div>
         </header>
